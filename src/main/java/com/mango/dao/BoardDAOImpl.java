@@ -1,5 +1,6 @@
 package com.mango.dao;
 
+import java.sql.Connection;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -12,10 +13,13 @@ public class BoardDAOImpl implements BoardDAO {
 	
 	@Inject
 	private SqlSession sqlSession;
-	private static String namespace = "com.mango.mappers.board";
+//	private static String namespace = "com.mango.mappers.board";
 	
 	@Override
 	public List list() throws Exception {
-		return sqlSession.selectList(namespace + ".list"); 
+		Object o = sqlSession.selectOne("selectTableList");
+		Connection conn = sqlSession.getConnection();
+		boolean closed = conn.isClosed();
+		return sqlSession.selectList("selectTableList"); 
 	}
 }

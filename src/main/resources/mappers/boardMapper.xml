@@ -1,10 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mango.mappers.board">
-	<select id="list" resultType="com.mango.domain.BoardDTO">
-		select
-			seq,			subject,			content,			name,			regdate,			readcount
-		from
-			board
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.BoardMapper">
+	<select id="selectTableList" resultType="java.util.HashMap">
+		SELECT SEQ,
+		SUBJECT,
+		CONTENT,
+		NAME,
+		REGDATE,
+		READCOUNT
+		FROM BOARD
 	</select>
 </mapper>
+
+<!--<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD 
+	Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <mapper namespace="mappers.boardMapper"> 
+	<select id="selectTableList" resultType="java.util.HashMap"> SELECT SEQ, 
+	SUBJECT, CONTENT, NAME, REGDATE, READCOUNT FROM BOARD </select> </mapper> -->

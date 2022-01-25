@@ -3,5 +3,12 @@
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
     
 <configuration>
-
+	<settings> <!-- 스네이크 케이스를 카멜케이스로 변경 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	
+	<!-- 매퍼들 Dao 1개당 1개씩 있음 -->
+	<mappers>
+		<mapper resource="mappers/boardMapper.xml" />
+	</mappers>
 </configuration>

@@ -18,7 +18,7 @@
 		<property name="configLocation" value="classpath:/config/mybatis-config.xml"></property>
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:/mappers/boardMapper.xml</value>
+				<value>classpath*:mappers/boardMapper.xml</value>
 			</list>
 		</property>
 	</bean>

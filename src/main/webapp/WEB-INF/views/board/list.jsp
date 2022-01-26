@@ -21,12 +21,12 @@
 	<tbody>
 		<c:forEach items="${list}" var="list">
  			<tr>
- 				<td>${list.seq}</td>
-  				<td>${list.subject}</td>
-				 <td>${list.content}</td>
- 				 <td>${list.name}</td>
- 				 <td>${list.regdate}</td>
- 				 <td>${list.readcount}</td>
+				<td>${list.SEQ}</td>
+				<td>${list.SUBJECT}</td>
+				<td>${list.CONTENT}</td>
+				<td>${list.NAME}</td>
+				<td>${list.REGDATE}</td>
+				<td>${list.READCOUNT}</td>
 			</tr>
 		</c:forEach>
 	</tbody>
